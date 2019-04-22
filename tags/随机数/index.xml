@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>随机数 on PRIEWIENV&#39;s Blog</title>
+    <link>https://blog.priewienv.me/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/</link>
+    <description>Recent content in 随机数 on PRIEWIENV&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Apr 2019 21:19:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.priewienv.me/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[研究] 区块链上的随机性（二）项目分析</title>
+      <link>https://blog.priewienv.me/post/randomness-blockchain-2/</link>
+      <pubDate>Sun, 21 Apr 2019 21:19:49 +0800</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/randomness-blockchain-2/</guid>
+      <description>&lt;p&gt;本篇文章是上一篇文章&lt;a href=&#34;https://blog.priewienv.me/post/randomness-blockchain-1/&#34;&gt;[研究] 区块链上的随机性（一）概述与构造&lt;/a&gt;的延续。作为区块链上的随机性系列文章的第二部分，本文介绍了目前主流的应用在区块链项目中的随机数协议，例如 Algorand、Cardano，Dfinity 和 Randao，并分析他们是如何使用第一部分所介绍的随机数协议核心以及它们的组合。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[研究] 区块链上的随机性（一）概述与构造</title>
+      <link>https://blog.priewienv.me/post/randomness-blockchain-1/</link>
+      <pubDate>Fri, 25 Jan 2019 21:19:45 +0800</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/randomness-blockchain-1/</guid>
+      <description>&lt;p&gt;本篇文章总结了目前主要的应用在区块链的不可预测随机数获取协议，并提炼出它们的设计思想，方法论以及依赖的假设，然后对他们进行比较。本文分为两部分：第一部分介绍基本概念，并从零开始构造适用于分布式系统的随机数协议核心；第二部分介绍目前主流的应用在区块链项目中的随机数协议，并分析他们是如何使用第一部分所介绍的某类或者某几类协议核心。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

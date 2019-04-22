@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>区块链 on PRIEWIENV&#39;s Blog</title>
+    <link>https://blog.priewienv.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
+    <description>Recent content in 区块链 on PRIEWIENV&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Apr 2019 21:19:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.priewienv.me/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[研究] 区块链上的随机性（二）项目分析</title>
+      <link>https://blog.priewienv.me/post/randomness-blockchain-2/</link>
+      <pubDate>Sun, 21 Apr 2019 21:19:49 +0800</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/randomness-blockchain-2/</guid>
+      <description>&lt;p&gt;本篇文章是上一篇文章&lt;a href=&#34;https://blog.priewienv.me/post/randomness-blockchain-1/&#34;&gt;[研究] 区块链上的随机性（一）概述与构造&lt;/a&gt;的延续。作为区块链上的随机性系列文章的第二部分，本文介绍了目前主流的应用在区块链项目中的随机数协议，例如 Algorand、Cardano，Dfinity 和 Randao，并分析他们是如何使用第一部分所介绍的随机数协议核心以及它们的组合。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[研究] 区块链上的随机性（一）概述与构造</title>
+      <link>https://blog.priewienv.me/post/randomness-blockchain-1/</link>
+      <pubDate>Fri, 25 Jan 2019 21:19:45 +0800</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/randomness-blockchain-1/</guid>
+      <description>&lt;p&gt;本篇文章总结了目前主要的应用在区块链的不可预测随机数获取协议，并提炼出它们的设计思想，方法论以及依赖的假设，然后对他们进行比较。本文分为两部分：第一部分介绍基本概念，并从零开始构造适用于分布式系统的随机数协议核心；第二部分介绍目前主流的应用在区块链项目中的随机数协议，并分析他们是如何使用第一部分所介绍的某类或者某几类协议核心。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[教程] Nervos AppChain 快速开发工具</title>
+      <link>https://blog.priewienv.me/post/nervos-appchain-tools/</link>
+      <pubDate>Wed, 24 Oct 2018 00:03:48 +0800</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/nervos-appchain-tools/</guid>
+      <description>&lt;p&gt;本文主要定位给想快速使用 Nervos AppChain 系列产品进行原型开发的用户。本文主要介绍帮助开发者快速在本地进行 Nervos AppChain 原型开发的一些好用的工具。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[论文] 异步网络下的区块链协议分析（一）概述</title>
+      <link>https://blog.priewienv.me/post/analysis-blockchain-async-1/</link>
+      <pubDate>Tue, 16 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/analysis-blockchain-async-1/</guid>
+      <description>&lt;p&gt;Rafael Pass 等人于 2017 年在密码学顶会之一的 Eurocrypt 发表了论文 &lt;a href=&#34;https://link.springer.com/chapter/10.1007/978-3-319-56614-6_22&#34;&gt;Analysis of the Blockchain Protocol in Asynchronous Networks&lt;/a&gt;。该论文基于前人的一系列工作在异步网络环境下对区块链协议进行了系统性的分析以及抽象，给出了形式化的模型和主要定理。根据这些模型和定理，我们可以准确地理解区块链协议各种安全属性的依赖条件以及边界。包括 Ouroboros 和 DFINITY 在内的热门项目的论文均以本文的模型和部分结论为基础进行安全性证明，可以说，这篇文章是区块链共识研究的必读之作。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[教程] 手把手教你在本地构建 Nervos AppChain 全家桶</title>
+      <link>https://blog.priewienv.me/post/nervos-appchain-local/</link>
+      <pubDate>Thu, 20 Sep 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/nervos-appchain-local/</guid>
+      <description>&lt;p&gt;本文主要定位给对区块链有一定了解的，但是对 Nervos AppChain 这一系列产品知之甚少，想要入门的用户。本文所使用的方法并不是最快的搭建一个 Dapp 的方法，在公共测试链上搭建 Dapp 会更加快速，可以跳过 CITA 链搭建步骤，请参考官方 Demo: &lt;a href=&#34;https://github.com/cryptape/dapp-demos/tree/develop/first-forever&#34;&gt;First Forever&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://blog.priewienv.me/sitemap.xml
