@@ -6,10 +6,21 @@
     <description>Recent content on PRIEWIENV&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Apr 2019 21:19:49 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 May 2019 22:32:57 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.priewienv.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[研究] 可验证延迟函数（VDF）（一）一文搞懂 VDF</title>
+      <link>https://blog.priewienv.me/post/verifiable-delay-function-1/</link>
+      <pubDate>Sun, 26 May 2019 22:32:57 +0800</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/verifiable-delay-function-1/</guid>
+      <description>&lt;p&gt;自从以太坊将&lt;strong&gt;可验证延迟函数（Verifiable Random Function, VDF）&lt;/strong&gt; 列入&lt;a href=&#34;https://vdfresearch.org/&#34;&gt;研究计划&lt;/a&gt;并打算在以太坊 2.0 使用之后，VDF 得到了广泛的关注。VDF 这个概念最初由斯坦福大学密码学教授 Dan Boneh 等人在其论文 &lt;a href=&#34;https://eprint.iacr.org/2018/601&#34;&gt;Verifiable Delay Function&lt;/a&gt; 中给出。该篇文章于 2018 年发表在密码学顶级会议之一的 CRYPTO 上。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>[研究] 区块链上的随机性（二）项目分析</title>
@@ -17,7 +28,7 @@
       <pubDate>Sun, 21 Apr 2019 21:19:49 +0800</pubDate>
       
       <guid>https://blog.priewienv.me/post/randomness-blockchain-2/</guid>
-      <description>&lt;p&gt;本篇文章是上一篇文章&lt;a href=&#34;https://blog.priewienv.me/post/randomness-blockchain-1/&#34;&gt;[研究] 区块链上的随机性（一）概述与构造&lt;/a&gt;的延续。作为区块链上的随机性系列文章的第二部分，本文介绍了目前主流的应用在区块链项目中的随机数协议，例如 Algorand、Cardano，Dfinity 和 Randao，并分析他们是如何使用第一部分所介绍的随机数协议核心以及它们的组合。&lt;/p&gt;
+      <description>&lt;p&gt;本篇文章是上一篇文章&lt;a href=&#34;../randomness-blockchain-1/&#34;&gt;[研究] 区块链上的随机性（一）概述与构造&lt;/a&gt;的延续。作为区块链上的随机性系列文章的第二部分，本文介绍了目前主流的应用在区块链项目中的随机数协议，例如 Algorand、Cardano，Dfinity 和 Randao，并分析他们是如何使用第一部分所介绍的随机数协议核心以及它们的组合。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
