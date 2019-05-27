@@ -56,8 +56,8 @@
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.priewienv.me/post/verifiable-delay-function-1/" /><meta property="article:published_time" content="2019-05-26T22:32:57&#43;08:00"/>
-<meta property="article:modified_time" content="2018-05-26T22:32:57&#43;08:00"/>
+<meta property="og:url" content="https://blog.priewienv.me/post/verifiable-delay-function-1/" /><meta property="article:published_time" content="2019-05-26T22:32:57&#43;02:00"/>
+<meta property="article:modified_time" content="2018-05-27T07:49:57&#43;02:00"/>
 
 <meta itemprop="name" content="[研究] 可验证延迟函数（VDF）（一）一文搞懂 VDF">
 <meta itemprop="description" content="自从以太坊将可验证延迟函数（Verifiable Random Function, VDF） 列入研究计划并打算在以太坊 2.0 使用之后，VDF 得到了广泛的关注。VDF 这个概念最初由斯坦福大学密码学教授 Dan Boneh 等人在其论文 Verifiable Delay Function 中给出。该篇文章于 2018 年发表在密码学顶级会议之一的 CRYPTO 上。
@@ -65,9 +65,9 @@
 ">
 
 
-<meta itemprop="datePublished" content="2019-05-26T22:32:57&#43;08:00" />
-<meta itemprop="dateModified" content="2019-05-26T22:32:57&#43;08:00" />
-<meta itemprop="wordCount" content="7138">
+<meta itemprop="datePublished" content="2019-05-26T22:32:57&#43;02:00" />
+<meta itemprop="dateModified" content="2019-05-26T22:32:57&#43;02:00" />
+<meta itemprop="wordCount" content="7354">
 
 
 
@@ -148,7 +148,7 @@
               <a href="/categories/%E7%A0%94%E7%A9%B6/"> 研究 </a>
             
           </div>
-        <span class="more-meta"> 约 7138 字 </span>
+        <span class="more-meta"> 约 7354 字 </span>
         <span class="more-meta"> 预计阅读 15 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -195,7 +195,13 @@
 
 <h2 id="简介">简介</h2>
 
-<p>VDF 是一类数学函数，能够使得该函数的计算需要至少一段已知的时间，即使是在同时使用少量 CPU 进行并行计算的情况下（这与比特币的 Proof-of-Work (PoW) 不同，<a href="#与-pow-的区别">后文</a>会详细解释）。同时满足以下性质：</p>
+<p>VDF 是一类数学函数，能够使得该函数的计算需要至少一段已知的时间，即使是在同时使用少量 CPU 进行并行计算的情况下（这与比特币的 Proof-of-Work (PoW) 不同，<a href="#与-pow-的区别">后文</a>会详细解释）。</p>
+
+<blockquote>
+<p>对于未精心设计过的算法，并行计算有可能极大地缩减其计算时间。以比特币的挖矿算法为例，设 <code>nonce</code> 取值为 $0 ~ 2^{32} -1$，如果只有一个运算单元，那么可能需要耗费多达 $2^{32}$ 次 SHA-256 计算的时间。如果有两个运算单元，就可以将任务对半分摊，让他们并行地计算哈希值。最多只需要耗费 $2^{31}$ 次 SHA-256 计算的时间。</p>
+</blockquote>
+
+<p>同时满足以下性质：</p>
 
 <ol>
 <li>VDF 的结果的检验应当是非常有效率的。</li>
@@ -298,7 +304,8 @@
 <ol>
 <li>证明 $\pi$ 不是必须的，如果仅仅通过 $y$ 就能验证的话。</li>
 <li>在 $y$ 的计算中，不允许有随机数的引入（为了保证唯一性），但是在 $\pi$ 的生成过程中可以引入。</li>
-<li>为了保证串行性，$Eval$ 在拥有不超过关于 $t$ 的<strong>多项式对数 (Poly-log)</strong> 个并行处理器时，运行时间必须为 $t$。</li>
+<li>为了保证串行性，$\mathsf{Eval}$ 在拥有不超过关于 $t$ 的<strong>多项式对数 (Poly-log)</strong> 个并行处理器时，运行时间必须为 $t$。</li>
+<li>为什么 $\mathsf{Eval}$ 要允许一定程度的并行计算达到时间 $t$ 呢？因为可能并没有构造能够完美地让并行和串行计算时间完全相同，所以我们需要容忍一定量的不太显著的并行加速。</li>
 </ol></li>
 <li>关于 $\mathsf{Verify}$
 
@@ -410,7 +417,7 @@
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
-    <span class="item-content">2018-05-26</span>
+    <span class="item-content">2018-05-27</span>
   </p>
   
   <p class="copyright-item">
@@ -458,7 +465,7 @@
     <script src="/lib/gitalk/gitalk-1.2.2.min.js"></script>
   <script type="text/javascript">
   var gitalk = new Gitalk({
-    id: '2019-05-26 22:32:57 \x2b0800 \x2b0800',
+    id: '2019-05-26 22:32:57 \x2b0200 CEST',
     title: '[研究] 可验证延迟函数（VDF）（一）一文搞懂 VDF',
     clientID: '0cf2b6742206062027a4',
     clientSecret: 'a68c575ded706d561fd7d785ad203caf50f0c79a',
