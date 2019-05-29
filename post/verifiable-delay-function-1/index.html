@@ -57,7 +57,7 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.priewienv.me/post/verifiable-delay-function-1/" /><meta property="article:published_time" content="2019-05-26T22:32:57&#43;02:00"/>
-<meta property="article:modified_time" content="2019-05-27T07:49:57&#43;02:00"/>
+<meta property="article:modified_time" content="2019-05-29T23:49:57&#43;02:00"/>
 
 <meta itemprop="name" content="[研究] 可验证延迟函数（VDF）（一）一文搞懂 VDF">
 <meta itemprop="description" content="自从以太坊将可验证延迟函数（Verifiable Random Function, VDF） 列入研究计划并打算在以太坊 2.0 使用之后，VDF 得到了广泛的关注。VDF 这个概念最初由斯坦福大学密码学教授 Dan Boneh 等人在其论文 Verifiable Delay Function 中给出。该篇文章于 2018 年发表在密码学顶级会议之一的 CRYPTO 上。
@@ -67,7 +67,7 @@
 
 <meta itemprop="datePublished" content="2019-05-26T22:32:57&#43;02:00" />
 <meta itemprop="dateModified" content="2019-05-26T22:32:57&#43;02:00" />
-<meta itemprop="wordCount" content="7346">
+<meta itemprop="wordCount" content="7547">
 
 
 
@@ -148,8 +148,8 @@
               <a href="/categories/%E7%A0%94%E7%A9%B6/"> 研究 </a>
             
           </div>
-        <span class="more-meta"> 约 7346 字 </span>
-        <span class="more-meta"> 预计阅读 15 分钟 </span>
+        <span class="more-meta"> 约 7547 字 </span>
+        <span class="more-meta"> 预计阅读 16 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -260,7 +260,7 @@
 
 <h3 id="副本证明-proof-of-replication">副本证明（Proof of Replication）</h3>
 
-<p>副本证明所需要解决的问题是，服务器如何向客户端证明自己在某一专门的存储介质上存储了指定的数据，即使这样的数据是可以从别的存储来源轻易获得的。一种思路是利用在时间上不对称的编码方案（也就是编码很慢，但是解码很快），VDF 可以做到这一点（事实上是<a href="#基本原理">可解码 VDF</a>）。身份为 $\mathit{id}$ 的服务器首先将文件分成 $b$-bit 大小的文件块 $B_i, 1 \leqslant i \leqslant n$，然后计算 $B_i \oplus H(\mathit{id} || i)$ 并将结果作为输入放进 VDF 计算得到 $y_i, 1 \leqslant i \leqslant n$，其中 $H$ 是输出长度为 $b$-bit 的防碰撞哈希函数。服务器存储所有的 $y_i$，客户端不断随机挑选 $i$ 进行轮询要求服务器返回 $y_i$，服务器在规定时间内需要响应给客户端相应的结果，而客户端可以在很短的时间内通过解码 $y_i$ 得到 $B_i$ 完成验证。如果服务器没有存储 $y_i$ ，那么想要正确响应客户端必须计算 $y_i$，然而这样的计算无法在规定的时间内完成。服务器也可以只存储一部分 $y_i$（比例为 $\rho$），由于客户端是随机轮询，每一次服务器成功欺骗客户端的概率为 $\rho$。只要客户端重复 $k$ 次这样的轮询，就可以将服务器欺骗成功的概率降到 $\rho^k$。</p>
+<p>副本证明所需要解决的问题是，服务器如何向客户端证明自己在某一专门的存储介质上存储了指定的数据，即使这样的数据是可以从别的存储来源轻易获得的。注意副本证明是为了证明服务器拥有一份数据的副本，而不是证明它有这样的数据。举个例子，云存储服务提供商声称自己为客户的数据做了额外的两份冗余备份来保证用户数据的 availability，因此客户需要为这样的冗余备份交更多的钱。但是怎么证明云服务提供商有一共三份副本而不是两份或者只有一份呢？这就需要用到副本证明。一种思路是利用在时间上不对称的编码方案（也就是编码很慢，但是解码很快），VDF 可以做到这一点（事实上是<a href="#基本原理">可解码 VDF</a>）。身份为 $\mathit{id}$ 的服务器首先将文件分成 $b$-bit 大小的文件块 $B_i, 1 \leqslant i \leqslant n$，然后计算 $B_i \oplus H(\mathit{id} || i)$ 并将结果作为输入放进 VDF 计算得到 $y_i, 1 \leqslant i \leqslant n$，其中 $H$ 是输出长度为 $b$-bit 的防碰撞哈希函数。服务器存储所有的 $y_i$，客户端不断随机挑选 $i$ 进行轮询要求服务器返回 $y_i$，服务器在规定时间内需要响应给客户端相应的结果，而客户端可以在很短的时间内通过解码 $y_i$ 得到 $B_i$ 完成验证。如果服务器没有存储 $y_i$ ，那么想要正确响应客户端必须计算 $y_i$，然而这样的计算无法在规定的时间内完成。服务器也可以只存储一部分 $y_i$（比例为 $\rho$），由于客户端是随机轮询，每一次服务器成功欺骗客户端的概率为 $\rho$。只要客户端重复 $k$ 次这样的轮询，就可以将服务器欺骗成功的概率降到 $\rho^k$。需要补充的一点是，服务器可以不存储 $B_i$，由于 $y_i$ 解码很快，即使只存储 $y_i$ 也不会太影响性能。</p>
 
 <h2 id="基本原理">基本原理</h2>
 
@@ -417,7 +417,7 @@
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
-    <span class="item-content">2019-05-27</span>
+    <span class="item-content">2019-05-29</span>
   </p>
   
   <p class="copyright-item">
