@@ -67,7 +67,7 @@
 
 <meta itemprop="datePublished" content="2019-05-26T22:32:57&#43;02:00" />
 <meta itemprop="dateModified" content="2019-05-26T22:32:57&#43;02:00" />
-<meta itemprop="wordCount" content="7690">
+<meta itemprop="wordCount" content="7786">
 
 
 
@@ -148,7 +148,7 @@
               <a href="/categories/%E7%A0%94%E7%A9%B6/"> 研究 </a>
             
           </div>
-        <span class="more-meta"> 约 7690 字 </span>
+        <span class="more-meta"> 约 7786 字 </span>
         <span class="more-meta"> 预计阅读 16 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -195,13 +195,13 @@
 
 <h2 id="简介">简介</h2>
 
-<p>VDF 是一类数学函数，能够使得该函数的计算需要至少一段已知的时间，即使是在同时使用少量 CPU 进行并行计算的情况下（这与比特币的 Proof-of-Work (PoW) 不同，<a href="#与-pow-的区别">后文</a>会详细解释）。</p>
+<p>VDF 是一类数学函数，能够使得该函数的计算需要至少一段已知的时间，即使是在同时使用少量 CPU 进行并行计算的情况下（这与比特币的 Proof-of-Work (PoW) 不同，<a href="#与-pow-的区别">后文</a>会详细解释）。VDF 通常会接受一个输入以及一些参数（安全参数、时间参数等），输出一个结果以及相应的证明（可以为空，如果结果能够自带证明）。验证者会依据输入、参数、输出以及结果来判断 VDF 的结果是否正确。</p>
 
 <blockquote>
 <p>对于未精心设计过的算法，并行计算有可能极大地缩减其计算时间。以比特币的挖矿算法为例，设 $0 \leqslant \mathtt{nonce} \leqslant 2^{32} -1$，如果只有一个运算单元，那么可能需要耗费多达 $2^{32}$ 次 SHA-256 计算的时间。如果有两个运算单元，就可以将任务对半分摊，让他们并行地计算哈希值。最多只需要耗费 $2^{31}$ 次 SHA-256 计算的时间。</p>
 </blockquote>
 
-<p>同时满足以下性质：</p>
+<p>同时，VDF 满足以下性质：</p>
 
 <ol>
 <li>VDF 的结果的检验应当是非常有效率的。</li>
