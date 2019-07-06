@@ -57,7 +57,7 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.priewienv.me/post/verifiable-delay-function-1/" /><meta property="article:published_time" content="2019-05-26T22:32:57&#43;02:00"/>
-<meta property="article:modified_time" content="2019-06-10T12:49:57&#43;02:00"/>
+<meta property="article:modified_time" content="2019-07-06T06:56:00&#43;02:00"/>
 
 <meta itemprop="name" content="[研究] 可验证延迟函数（VDF）（一）一文搞懂 VDF">
 <meta itemprop="description" content="自从以太坊将可验证延迟函数（Verifiable Delay Function, VDF） 列入研究计划并打算在以太坊 2.0 使用之后，VDF 得到了广泛的关注。VDF 这个概念最初由斯坦福大学密码学教授 Dan Boneh 等人在其论文 Verifiable Delay Function 中给出。该篇文章于 2018 年发表在密码学顶级会议之一的 CRYPTO 上。
@@ -67,7 +67,7 @@
 
 <meta itemprop="datePublished" content="2019-05-26T22:32:57&#43;02:00" />
 <meta itemprop="dateModified" content="2019-05-26T22:32:57&#43;02:00" />
-<meta itemprop="wordCount" content="7787">
+<meta itemprop="wordCount" content="7807">
 
 
 
@@ -148,7 +148,7 @@
               <a href="/categories/%E7%A0%94%E7%A9%B6/"> 研究 </a>
             
           </div>
-        <span class="more-meta"> 约 7787 字 </span>
+        <span class="more-meta"> 约 7807 字 </span>
         <span class="more-meta"> 预计阅读 16 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -264,7 +264,7 @@
 <p>在 PoS 协议中，任意时刻都有一组权益相关者拥有按照权益多少分配的投票权。PoS 假设大多数权益相关者并没有理由对系统造成破坏，因为这样反而会损害自己的权益。但是如果这些权益相关者在某一个时间点出售了自己的权益，这样的激励对他们来讲是无效的。这些已经出售了自己权益的曾经的权益相关者仍然可以在曾经某一个时间点轻易对（那时他们占据大多数权益） PoS 链分叉达到原有链的的长度，从中攫取额外的利益，这样的攻击被称作 Long-range attack。它在 PoW 上不太可能发生，因为对于 PoW 来讲，无论从哪一个时间点进行分叉，都必须要付出相应的算力才能追上原有的链，想要分叉的区块越多，付出的算力也就越多。</p>
 </blockquote>
 
-<p>但是必须要指出的是，这样的方法并不是完美的，因为 VDF 仍然是可以被特殊硬件加速的（尽管是常数级的）。如果攻击者获得了诚实节点 10 倍的计算速度，那么这样的加速对于使用 VDF 作证明的 PoS 链是不可接受的（攻击者可以在 10 年之后伪造出 1 年以前的区块）。</p>
+<p>但是必须要指出的是，这样的方法并不是完美的，因为 VDF 仍然是可以被特殊硬件加速的（尽管是常数级的）。如果攻击者获得了诚实节点 10 倍的计算速度，那么攻击者可以用 1 年的时间伪造出 10 年以前的区块，从而用 1 年的时间获得一条有 10 年历史的链。这样的加速对于使用 VDF 作证明的 PoS 链是不可接受的。</p>
 
 <blockquote>
 <p>10 倍的加速对于随机数生成的场景无所谓，因为该场景下，不需要保证“攻击者算得没有诚实节点快”，只需要保证攻击者无法在某个时间点（随机数来源再也无法更改的时间点，例如股市闭市）之前无法计算出结果即可。从而在随机数生成的场景，我们可以选取一个足够长的时间参数，使得攻击者即使加速也无法操纵随机数。</p>
@@ -345,7 +345,7 @@
 <ol>
 <li>计算 $k = x^2$</li>
 <li>取 $k$ 除以 $\lambda$ 的余数得到 $l$</li>
-<li>令 $k$ 取 $l$，返回第一步，如果是最后一次操作，输出结果 $y$</li>
+<li>令 $x$ 取 $l$，返回第一步，如果是最后一次操作，输出结果 $y$</li>
 </ol>
 
 <p>假设我们的输入 $x = 11$，$t = 8$，那么结果为 $95$，事实上，如果我们让 $t$ 取不同的值，把结果都记录下来，可以得到下述表格</p>
@@ -428,7 +428,7 @@
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
-    <span class="item-content">2019-06-10</span>
+    <span class="item-content">2019-07-06</span>
   </p>
   
   <p class="copyright-item">
