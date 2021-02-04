@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>分布式共识 on PRIEWIENV&#39;s Blog</title>
@@ -17,9 +17,7 @@
       <pubDate>Sun, 26 May 2019 22:32:57 +0200</pubDate>
       
       <guid>https://blog.priewienv.me/post/verifiable-delay-function-1/</guid>
-      <description>&lt;p&gt;自从以太坊将&lt;strong&gt;可验证延迟函数（Verifiable Delay Function, VDF）&lt;/strong&gt; 列入&lt;a href=&#34;https://vdfresearch.org/&#34;&gt;研究计划&lt;/a&gt;并打算在以太坊 2.0 使用之后，VDF 得到了广泛的关注。VDF 这个概念最初由斯坦福大学密码学教授 Dan Boneh 等人在其论文 &lt;a href=&#34;https://eprint.iacr.org/2018/601&#34;&gt;Verifiable Delay Function&lt;/a&gt; 中给出。该篇文章于 2018 年发表在密码学顶级会议之一的 CRYPTO 上。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;自从以太坊将&lt;strong&gt;可验证延迟函数（Verifiable Delay Function, VDF）&lt;/strong&gt; 列入&lt;a href=&#34;https://vdfresearch.org/&#34;&gt;研究计划&lt;/a&gt;并打算在以太坊 2.0 使用之后，VDF 得到了广泛的关注。VDF 这个概念最初由斯坦福大学密码学教授 Dan Boneh 等人在其论文 &lt;a href=&#34;https://eprint.iacr.org/2018/601&#34;&gt;Verifiable Delay Function&lt;/a&gt; 中给出。该篇文章于 2018 年发表在密码学顶级会议之一的 CRYPTO 上。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -28,9 +26,7 @@
       <pubDate>Tue, 16 Oct 2018 00:00:00 +0800</pubDate>
       
       <guid>https://blog.priewienv.me/post/analysis-blockchain-async-1/</guid>
-      <description>&lt;p&gt;Rafael Pass 等人于 2017 年在密码学顶会之一的 Eurocrypt 发表了论文 &lt;a href=&#34;https://link.springer.com/chapter/10.1007/978-3-319-56614-6_22&#34;&gt;Analysis of the Blockchain Protocol in Asynchronous Networks&lt;/a&gt;。该论文基于前人的一系列工作在异步网络环境下对区块链协议进行了系统性的分析以及抽象，给出了形式化的模型和主要定理。根据这些模型和定理，我们可以准确地理解区块链协议各种安全属性的依赖条件以及边界。包括 Ouroboros 和 DFINITY 在内的热门项目的论文均以本文的模型和部分结论为基础进行安全性证明，可以说，这篇文章是区块链共识研究的必读之作。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Rafael Pass 等人于 2017 年在密码学顶会之一的 Eurocrypt 发表了论文 &lt;a href=&#34;https://link.springer.com/chapter/10.1007/978-3-319-56614-6_22&#34;&gt;Analysis of the Blockchain Protocol in Asynchronous Networks&lt;/a&gt;。该论文基于前人的一系列工作在异步网络环境下对区块链协议进行了系统性的分析以及抽象，给出了形式化的模型和主要定理。根据这些模型和定理，我们可以准确地理解区块链协议各种安全属性的依赖条件以及边界。包括 Ouroboros 和 DFINITY 在内的热门项目的论文均以本文的模型和部分结论为基础进行安全性证明，可以说，这篇文章是区块链共识研究的必读之作。&lt;/p&gt;</description>
     </item>
     
   </channel>

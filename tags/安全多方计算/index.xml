@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>安全多方计算 on PRIEWIENV&#39;s Blog</title>
+    <link>https://blog.priewienv.me/tags/%E5%AE%89%E5%85%A8%E5%A4%9A%E6%96%B9%E8%AE%A1%E7%AE%97/</link>
+    <description>Recent content in 安全多方计算 on PRIEWIENV&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 19 Oct 2018 22:33:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.priewienv.me/tags/%E5%AE%89%E5%85%A8%E5%A4%9A%E6%96%B9%E8%AE%A1%E7%AE%97/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[教程] 密码学基石（八）通用密码学协议</title>
+      <link>https://blog.priewienv.me/post/foundations-of-cryptography-8/</link>
+      <pubDate>Fri, 19 Oct 2018 22:33:09 +0800</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/foundations-of-cryptography-8/</guid>
+      <description>&lt;p&gt;本篇博文用来记录我学习 Oded Goldreich 的《Foundations of Cryptography》时的笔记与感悟。同时参考 Yehuda Lindell 主编的《Tutorials on Foundations of Cryptography》。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

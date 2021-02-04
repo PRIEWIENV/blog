@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>复杂度理论 on PRIEWIENV&#39;s Blog</title>
+    <link>https://blog.priewienv.me/tags/%E5%A4%8D%E6%9D%82%E5%BA%A6%E7%90%86%E8%AE%BA/</link>
+    <description>Recent content in 复杂度理论 on PRIEWIENV&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 29 Jan 2021 22:57:09 +0100</lastBuildDate>
+    
+	<atom:link href="https://blog.priewienv.me/tags/%E5%A4%8D%E6%9D%82%E5%BA%A6%E7%90%86%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[教程] 密码学基石（一）计算模型</title>
+      <link>https://blog.priewienv.me/post/foundations-of-cryptography-1/</link>
+      <pubDate>Fri, 29 Jan 2021 22:57:09 +0100</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/foundations-of-cryptography-1/</guid>
+      <description>&lt;p&gt;本篇博文用来记录我学习 Oded Goldreich 的《Foundations of Cryptography》时的笔记与感悟。同时参考 Yehuda Lindell 主编的《Tutorials on Foundations of Cryptography》。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[教程] 密码学基石（三）单向函数</title>
+      <link>https://blog.priewienv.me/post/foundations-of-cryptography-3/</link>
+      <pubDate>Fri, 29 Jan 2021 22:57:09 +0100</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/foundations-of-cryptography-3/</guid>
+      <description>&lt;p&gt;本篇博文用来记录我学习 Oded Goldreich 的《Foundations of Cryptography》时的笔记与感悟。同时参考 Yehuda Lindell 主编的《Tutorials on Foundations of Cryptography》。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[教程] 密码学基石（二）随机预言机方法论</title>
+      <link>https://blog.priewienv.me/post/foundations-of-cryptography-2/</link>
+      <pubDate>Fri, 19 Oct 2018 22:33:09 +0800</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/foundations-of-cryptography-2/</guid>
+      <description>&lt;p&gt;本篇博文用来记录我学习 Oded Goldreich 的《Foundations of Cryptography》时的笔记与感悟。同时参考 Yehuda Lindell 主编的《Tutorials on Foundations of Cryptography》。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>不可区分性 on PRIEWIENV&#39;s Blog</title>
+    <link>https://blog.priewienv.me/tags/%E4%B8%8D%E5%8F%AF%E5%8C%BA%E5%88%86%E6%80%A7/</link>
+    <description>Recent content in 不可区分性 on PRIEWIENV&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 19 Oct 2018 22:33:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.priewienv.me/tags/%E4%B8%8D%E5%8F%AF%E5%8C%BA%E5%88%86%E6%80%A7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[教程] 密码学基石（七）数字签名</title>
+      <link>https://blog.priewienv.me/post/foundations-of-cryptography-7/</link>
+      <pubDate>Fri, 19 Oct 2018 22:33:09 +0800</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/foundations-of-cryptography-7/</guid>
+      <description>&lt;p&gt;本篇博文用来记录我学习 Oded Goldreich 的《Foundations of Cryptography》时的笔记与感悟。同时参考 Yehuda Lindell 主编的《Tutorials on Foundations of Cryptography》。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[教程] 密码学基石（五）零知识证明</title>
+      <link>https://blog.priewienv.me/post/foundations-of-cryptography-5/</link>
+      <pubDate>Fri, 19 Oct 2018 22:33:09 +0800</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/foundations-of-cryptography-5/</guid>
+      <description>&lt;p&gt;本篇博文用来记录我学习 Oded Goldreich 的《Foundations of Cryptography》时的笔记与感悟。同时参考 Yehuda Lindell 主编的《Tutorials on Foundations of Cryptography》。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[教程] 密码学基石（六）加密</title>
+      <link>https://blog.priewienv.me/post/foundations-of-cryptography-6/</link>
+      <pubDate>Fri, 19 Oct 2018 22:33:09 +0800</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/foundations-of-cryptography-6/</guid>
+      <description>&lt;p&gt;本篇博文用来记录我学习 Oded Goldreich 的《Foundations of Cryptography》时的笔记与感悟。同时参考 Yehuda Lindell 主编的《Tutorials on Foundations of Cryptography》。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[教程] 密码学基石（四）伪随机数发生器，Indistinguishability 和 Indifferentiability</title>
+      <link>https://blog.priewienv.me/post/foundations-of-cryptography-4/</link>
+      <pubDate>Fri, 19 Oct 2018 22:33:09 +0800</pubDate>
+      
+      <guid>https://blog.priewienv.me/post/foundations-of-cryptography-4/</guid>
+      <description>&lt;p&gt;本篇博文用来记录我学习 Oded Goldreich 的《Foundations of Cryptography》时的笔记与感悟。同时参考 Yehuda Lindell 主编的《Tutorials on Foundations of Cryptography》。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

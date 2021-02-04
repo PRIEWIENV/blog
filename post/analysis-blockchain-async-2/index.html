@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[论文] 异步网络下的区块链协议分析（二）证明 - PRIEWIENV&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="PRIEWIENV" /><meta name="description" content="" /><meta name="keywords" content="blockchain, cryptocurrency, bitcoin, ethereum, blog" />
+
+
+<meta name="baidu-site-verification" content="w1UfW7hXXW" />
+
+
+
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
+
+
+<link rel="canonical" href="https://blog.priewienv.me/post/analysis-blockchain-async-2/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="[论文] 异步网络下的区块链协议分析（二）证明" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.priewienv.me/post/analysis-blockchain-async-2/" />
+<meta property="article:published_time" content="2018-10-15T18:36:56+08:00" />
+<meta property="article:modified_time" content="2018-10-15T18:36:56+08:00" />
+<meta itemprop="name" content="[论文] 异步网络下的区块链协议分析（二）证明">
+<meta itemprop="description" content="">
+<meta itemprop="datePublished" content="2018-10-15T18:36:56&#43;08:00" />
+<meta itemprop="dateModified" content="2018-10-15T18:36:56&#43;08:00" />
+<meta itemprop="wordCount" content="1994">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[论文] 异步网络下的区块链协议分析（二）证明"/>
+<meta name="twitter:description" content=""/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">PRIEWIENV&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">PRIEWIENV&#39;s Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[论文] 异步网络下的区块链协议分析（二）证明</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-10-15 </span>
+        
+          <span class="more-meta"> 约 1994 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#证明思路">证明思路</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="证明思路">证明思路</h3>
+<p>本文的作者为了处理前人工作种被忽略的攻击策略，采用了完全不同的证明技术。作者不去直接分析整个区块链协议的执行过程，而是从一系列的简化后的过程入手去证明。</p>
+<p>例如，我们的目标是表明在最佳攻击中，对手应该总是尽可能长地延迟消息（$\Delta$步之后消息始终被传递）。这种随机性主导的分析的一个障碍是，一旦我们开始推迟消息，诚实方就会开始“挖”不同的区块。并且我们的两个过程的执行会发生分歧并使得比较变得困难：理想情况下，为了执行统治参数，我们要考虑一个固定的执行（所有部分的的随机性都是固定的）并通过归纳证明在特定的执行中，延迟消息少于 $\Delta$ 永远不会帮助攻击者。问题是这样的关于支配的声称不是真的：人们可以提出一个场景（随机性是固定的），其中，“幸运地”延迟消息为诚实的政党提供了改善的东西（他们现在开始挖掘那些块，神奇地带来更多的成功）。当然，这种情况发生的可能性应该很小，但是形式化地证明它将要求我们以某种方式将带有非平凡最大延迟的实验和不带的结合在一起（由于随机预言创建的依赖关系）。</p>
+<p><strong>$\mathcal{F}_{tree}$模型</strong> 为了克服这个问题，作者采取了安全计算文献中常使用的“模拟技术”。我们首先考虑一个理想化的场景：参与者不挖区块，而是访问一个理想化的“挖矿”的功能。我们称这样的功能为 $\mathcal{F}_{tree}$。此功能决定了诚实方是否成功挖矿（随机地）并且成功的概率独立于诚实方当前试图扩展的链。
+在这个模型中，我们现在可以为每个固定的随机性使用一个支配参数来用于实验。接着作者证明了，任何对随机预言机模型下的“真实世界”的协议所进行的成功的攻击都可以转化为对理想化的 $\mathcal{F}_{tree}$ 模型的攻击。这里的关键技术问题在于处理随机预言机所导致的依赖。</p>
+<p><strong>chain growth 的下界</strong> 解决了上述技术问题，下一个至关重要的步骤是证明 <em>chain growth</em> 的下界。粗略地说，我们通过归纳证明了（在$\mathcal{F}_{tree}$模型下的）链和协议的实际执行相比增长得至少同样快，正如在一个混合的实验，其中a）所有消息都被最大程度地延迟，b）每当某个诚实参与者挖出一个区块，诚实方就“冻结”并停止挖矿，并且 c）所有对手发送的消息都被移除。这种混合实验的优点是链增长过程可以被描述为一个简单马尔可夫链(simple Markov chain)——不再有任何“对抗性的切换”，并且由于“冻结”，诚实永远不参与者会有任何链上冲突。接下来可以使用 standard Chernoff bound 分析这个过程。我们强调要进行归纳证明，关键在于我们的分析要在 $\mathcal{F}_{tree}$ 模型下进行。</p>
+<p><strong>不能长时间扣押区块</strong> 我们接下来使用 $chain growth$ 的下界来证明一个区块链协议的核心属性，我们称之为“不能长时间扣押区块”：对手不能“扣留”挖出来的块很长时间——除非它在很短的时间内向诚实参与者广播该块。这样的区块变得“无关紧要”并且永远不会被诚实参与者所接受。粗略地说，我们证明了这一点，通过假设对手控制全网不到一半的算力，诚实参与者的链将以比任何对手创建的私有链更快的速度增长。因此除非它快速释放任何区块，否则诚实参与者的链条对于来说太长了以至于这样的区块变得无关紧要。</p>
+<p><strong>证明一致性</strong> 最后，证明一致性是我们证明中最具挑战性的部分。我们首先考虑一个没有对抗性消息，并且具有确定延迟的执行，，并确定一个“模式”，确保诚实参与者的链收敛：粗略地讲，模式——我们称之为“收敛机会”——是1）有一段 $\Delta$ 轮的沉默，其中没有诚实参与者挖出区块，2）在一个诚实玩家挖出区块之后一轮 3) 然后是另一个 $\Delta$ 轮的沉默。注意无论何时出现这种模式，最终所有的诚实参与者收敛到一条链（这就是为什么我们称之为收敛机会）：在第一个沉默期之后，他们所有人都就链的长度达成共识（但可能仍然有不同的链条），这样，发现新区块的单独的矿工将最长链延长一个区块，并且在第二个沉默期之后，这条链传播到了所有的诚实参与者（因为它比他们现有所有的链都长，他们会切换到它）。我们现在关心在某个特定的时间段 $t$ 内有多少这样的模式发生。这里的关键点是我们现在分析的过程是无记忆的，因此可以用一个（稍微简单的）马尔可夫链来描述。消极地讲，由这个问题引起的马尔可夫链太复杂，以马尔可夫链的标准中心界限(standard concentration bound)（参见例如[CLLM12]）无法分析;我们改为直接分析一个简化的实验（粗略地说，改为分析诚实参与者成功挖矿的时间间隔。）然后我们用它来提供收敛机会数量的下界。</p>
+<p>最后，一旦我们建立了一个收敛机会个数的强中心界限，我们可以证明攻击者“破坏”这种模式本身的唯一方法就是挖出一个被诚实参与者接受的块。我们在这里依靠 block-withholding 引理来证明任何可以被用来破坏收敛机会的块必须在我们分析的时间段开始不久前就已经被对手挖出来了。然后我们证明在此（稍微延长）期间开采的对抗性的区块数量小于“收敛机会”的数量。因此得出结论，即使在对手存在的情况下，至少有一个收敛机会仍然保留，因此诚实方的链依然可以收敛。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">PRIEWIENV</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-10-15
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</span>
+  </p>
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/analysis-blockchain-async-1/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">[论文] 异步网络下的区块链协议分析（一）概述</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/nervos-appchain-local/">
+            <span class="next-text nav-default">[教程] 手把手教你在本地构建 Nervos AppChain 全家桶</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2018-10-15 18:36:56 \x2b0800 \x2b0800',
+        title: '[论文] 异步网络下的区块链协议分析（二）证明',
+        clientID: '0cf2b6742206062027a4',
+        clientSecret: 'a68c575ded706d561fd7d785ad203caf50f0c79a',
+        repo: 'blog',
+        owner: 'priewienv',
+        admin: ['priewienv'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/PRIEWIENV" class="iconfont icon-github" title="github"></a>
+  <a href="https://blog.priewienv.me/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>PRIEWIENV</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-126034647-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

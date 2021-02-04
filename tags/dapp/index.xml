@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dapp on PRIEWIENV&#39;s Blog</title>
@@ -17,9 +17,7 @@
       <pubDate>Wed, 24 Oct 2018 00:03:48 +0800</pubDate>
       
       <guid>https://blog.priewienv.me/post/nervos-appchain-tools/</guid>
-      <description>&lt;p&gt;本文主要定位给想快速使用 Nervos AppChain 系列产品进行原型开发的用户。本文主要介绍帮助开发者快速在本地进行 Nervos AppChain 原型开发的一些好用的工具。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;本文主要定位给想快速使用 Nervos AppChain 系列产品进行原型开发的用户。本文主要介绍帮助开发者快速在本地进行 Nervos AppChain 原型开发的一些好用的工具。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -28,9 +26,7 @@
       <pubDate>Thu, 20 Sep 2018 00:00:00 +0800</pubDate>
       
       <guid>https://blog.priewienv.me/post/nervos-appchain-local/</guid>
-      <description>&lt;p&gt;本文主要定位给对区块链有一定了解的，但是对 Nervos AppChain 这一系列产品知之甚少，想要入门的用户。本文所使用的方法并不是最快的搭建一个 Dapp 的方法，在公共测试链上搭建 Dapp 会更加快速，可以跳过 CITA 链搭建步骤，请参考官方 Demo: &lt;a href=&#34;https://github.com/cryptape/dapp-demos/tree/develop/first-forever&#34;&gt;First Forever&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;本文主要定位给对区块链有一定了解的，但是对 Nervos AppChain 这一系列产品知之甚少，想要入门的用户。本文所使用的方法并不是最快的搭建一个 Dapp 的方法，在公共测试链上搭建 Dapp 会更加快速，可以跳过 CITA 链搭建步骤，请参考官方 Demo: &lt;a href=&#34;https://github.com/cryptape/dapp-demos/tree/develop/first-forever&#34;&gt;First Forever&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
     
   </channel>
