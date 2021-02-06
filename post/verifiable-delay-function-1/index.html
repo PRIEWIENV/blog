@@ -45,12 +45,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.priewienv.me/post/verifiable-delay-function-1/" />
 <meta property="article:published_time" content="2019-05-26T22:32:57+02:00" />
-<meta property="article:modified_time" content="2019-07-06T06:56:00+02:00" />
+<meta property="article:modified_time" content="2021-02-06T02:36:00+01:00" />
 <meta itemprop="name" content="[研究] 可验证延迟函数（VDF）（一）一文搞懂 VDF">
 <meta itemprop="description" content="自从以太坊将可验证延迟函数（Verifiable Delay Function, VDF） 列入研究计划并打算在以太坊 2.0 使用之后，VDF 得到了广泛的关注。VDF 这个概念最初由斯坦福大学密码学教授 Dan Boneh 等人在其论文 Verifiable Delay Function 中给出。该篇文章于 2018 年发表在密码学顶级会议之一的 CRYPTO 上。">
 <meta itemprop="datePublished" content="2019-05-26T22:32:57&#43;02:00" />
-<meta itemprop="dateModified" content="2019-07-06T06:56:00&#43;02:00" />
-<meta itemprop="wordCount" content="7819">
+<meta itemprop="dateModified" content="2021-02-06T02:36:00&#43;01:00" />
+<meta itemprop="wordCount" content="7823">
 
 
 
@@ -136,7 +136,7 @@
         <div class="post-category">
             <a href="/categories/%E7%A0%94%E7%A9%B6/"> 研究 </a>
             </div>
-          <span class="more-meta"> 约 7819 字 </span>
+          <span class="more-meta"> 约 7823 字 </span>
           <span class="more-meta"> 预计阅读 16 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -308,7 +308,13 @@
 <p>如果我们知道 $\lambda$ 的因式分解，例如 $161 = 7 \times 23$，那么我们可以通过两次指数运算来快速计算出 $y$ 的值。首先计算函数 $\phi(161) = (7-1) \times (23-1) = 132$，然后计算 $2^t$ 除以 $\phi(161)$ 的余数</p>
 <p>$$2^8 \equiv 124 \mod 132$$</p>
 <p>然后计算 $x^{124}$ 除以 $\lambda$ 的余数</p>
-<p>$$11^{124} \equiv 11^{2^6 + 2^5 + 2^4 + 2^3 + 2^2} \equiv 4 \times 2 \times 18 \times 100 \times 151 \equiv 95 \mod 161$$</p>
+<p>$$
+\begin{align}
+11^{124} &amp;\equiv 11^{2^6 + 2^5 + 2^4 + 2^3 + 2^2}\\<br>
+&amp;\equiv 4 \times 2 \times 18 \times 100 \times 151\\<br>
+&amp;\equiv 95 \mod 161
+\end{align}
+$$</p>
 <p>上述过程比起连续平方 8 次看似没有减轻多少工作量，但实际上当 $t$ 和 $\lambda$ 非常大（$t \approx 2^{30}$）时，远比连续平方快得多。一般地，函数 $\phi(n) = \prod_{i=1}^r p_i^{k_i-1}(p_i-1)$，如果 $n = p_1^{k_1}p_2^{k_2} \cdots p_r^{k_r}$。这个函数被称之为**欧拉函数（Euler&rsquo;s Totient Function）**。上述例子可以一般化为</p>
 <p>$$e \equiv 2^t \mod \phi(\lambda), \quad y \equiv x^e \mod \lambda$$.</p>
 <p>因此，如果没有任何人知道 $\lambda$ 的因式分解，也就无法快速计算出 $\phi(\lambda)$，从而只能重复 $t$ 次平方操作使用</p>
@@ -334,7 +340,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2019-07-06
+        2021-02-06
         
     </span>
   </p>
